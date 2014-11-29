@@ -56,7 +56,7 @@
   var addTZ = function(dt, name, params){
     var p = parseParams(params);
 
-    if (params && p){
+    if (params && p && p.TZID){
       dt[name].tz = p.TZID
     }
 
@@ -99,7 +99,7 @@
             parseInt(comps[5], 10),
             parseInt(comps[6], 10 )
           ));
-          // TODO add tz
+          curr[name].tz = "UTC";
         } else {
           curr[name] = new Date(
             parseInt(comps[1], 10),
