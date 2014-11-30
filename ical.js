@@ -101,14 +101,14 @@
           ));
           curr[name].tz = "UTC";
         } else {
-          curr[name] = new Date(
+          curr[name] = new Date(Date.UTC(
             parseInt(comps[1], 10),
             parseInt(comps[2], 10)-1,
             parseInt(comps[3], 10),
             parseInt(comps[4], 10),
             parseInt(comps[5], 10),
             parseInt(comps[6], 10)
-          );
+          ));
         }
       }
 
